@@ -1,3 +1,6 @@
 /* Custom animations and styles for the portfolio */
 /* All Tailwind utilities are available */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
