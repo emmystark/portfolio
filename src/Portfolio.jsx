@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Github, Mail, Code, Database, Cloud, Zap, ChevronDown, ExternalLink, Briefcase, GraduationCap } from 'lucide-react';
+import { Github, Mail, Code, Database, Cloud, Zap, ChevronDown, ExternalLink, Briefcase, GraduationCap, Linkedin, fileUser } from 'lucide-react';
+
+import './styles.css';
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('home');
@@ -118,9 +120,17 @@ export default function Portfolio() {
                className="p-3 bg-slate-800/50 hover:bg-slate-700 rounded-lg transition-all duration-300 hover:scale-110">
               <Github size={24} />
             </a>
+            <a href="https://www.linkedin.com/in/emmanuel-nkereuwems/" target="_blank" rel="noopener noreferrer" 
+               className="p-3 bg-slate-800/50 hover:bg-slate-700 rounded-lg transition-all duration-300 hover:scale-110">
+              <Linkedin size={24} />
+            </a>
             <a href="mailto:nkememmanuel5505@gmail.com"
                className="p-3 bg-slate-800/50 hover:bg-slate-700 rounded-lg transition-all duration-300 hover:scale-110">
               <Mail size={24} />
+            </a>
+            <a href="mailto:nkememmanuel5505@gmail.com"
+               className="p-3 bg-slate-800/50 hover:bg-slate-700 rounded-lg transition-all duration-300 hover:scale-110">
+              <fileUser size={24} />
             </a>
           </div>
           
@@ -243,13 +253,19 @@ export default function Portfolio() {
               <a href="mailto:nkememmanuel5505@gmail.com" 
                  className="flex items-center justify-center gap-3 text-lg text-gray-300 hover:text-cyan-400 transition-all duration-300 group">
                 <Mail className="group-hover:scale-110 transition-transform" size={24} />
-                <span>nkememmanuel5505@gmail.com</span>
+                <span>Gmail</span>
               </a>
               
               <a href="https://github.com/emmystark" target="_blank" rel="noopener noreferrer"
                  className="flex items-center justify-center gap-3 text-lg text-gray-300 hover:text-cyan-400 transition-all duration-300 group">
                 <Github className="group-hover:scale-110 transition-transform" size={24} />
-                <span>github.com/emmystark</span>
+                <span>github</span>
+                <ExternalLink size={16} />
+              </a>
+              <a href="https://www.linkedin.com/in/emmanuel-nkereuwems/" target="_blank" rel="noopener noreferrer"
+                 className="flex items-center justify-center gap-3 text-lg text-gray-300 hover:text-cyan-400 transition-all duration-300 group">
+                <Linkedin className="group-hover:scale-110 transition-transform" size={24} />
+                <span>linkedin</span>
                 <ExternalLink size={16} />
               </a>
             </div>
@@ -260,7 +276,7 @@ export default function Portfolio() {
       {/* Footer */}
       <footer className="py-8 border-t border-slate-800">
         <div className="max-w-6xl mx-auto px-6 text-center text-gray-400">
-          <p>© 2026 Emmanuel Nkereuwem. Built with React & Tailwind CSS.</p>
+          <p>© 2026 Emmanuel Nkereuwem.</p>
         </div>
       </footer>
     </div>
