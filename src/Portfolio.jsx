@@ -19,6 +19,7 @@ import "./styles.css";
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState("home");
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,13 +43,19 @@ export default function Portfolio() {
 
   const scrollToSection = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    setIsMobileMenuOpen(false);
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   const experiences = [
     {
       title: "Backend Engineer Lead",
       company: "VideoDB AI Surveillance Agent",
-      period: "Oct 2025 - Jan 2026",
+      // period: "Oct 2025 - Jan 2026",
+      projectUrl: "https://github.com/emmystark/video-surveillance-agent-.git", // Replace with actual URL
       description: [
         "Developed scalable backend solutions for video processing and data management",
         "Conducted performance tuning of server applications, enhancing overall responsiveness and stability",
@@ -58,7 +65,8 @@ export default function Portfolio() {
     {
       title: "Backend Engineer",
       company: "Private Chatbot for Companies",
-      period: "Jan 2025 - Sept 2025",
+      // period: "Jan 2025 - Sept 2025",
+      projectUrl: "https://hfragchatbo.vercel.app/login", // Replace with actual URL
       description: [
         "Developed a secure Python/LangChain backend for a fintech chatbot, enabling precise document-based queries for internal tools",
         "Integrated NLU and file processing to extract insights from sensitive crypto and financial data with a high focus on privacy",
@@ -66,13 +74,70 @@ export default function Portfolio() {
         "Reduced development time by 20% by architecting reusable React components and optimizing RESTful API performance",
       ],
     },
+    // {
+    //   title: "Full Stack Developer",
+    //   company: "Freelance",
+    //   // period: "Oct 2023 - Dec 2024",
+    //   projectUrl: "https://github.com/emmystark/ecommerce-platform", // Replace with actual URL
+    //   description: [
+    //     "Engineered Django backend logic for cart, order, and payment systems, designed for fintech and crypto-transaction scalability",
+    //     "Managed MySQL databases for inventory and transactions, implementing secure APIs to ensure data integrity and fraud prevention",
+    //   ],
+    // },
+    {
+      title: "Frontend Developer",
+      company: "Green Treat Ltd - Landscaping & Infrastructure Platform",
+      // period: "Oct 2023 - Dec 2024",
+      projectUrl: "https://greentreatltd.com/v2/", // Replace with actual URL
+      description: [
+        "Full-stack web development for an enterprise landscaping and civil construction company. ",
+        "Built a comprehensive WordPress-based platform featuring project portfolios, service catalogs, team management, and client testimonials.",
+        "Integrated WooCommerce for quote requests and implemented SEO optimization for improved search rankings.",
+        "The site serves as the digital presence for a company specializing in golf course construction, irrigation systems, and wastewater solutions.",
+      ],
+    },
+    {
+      title: "Frontend Developer",
+      company: "Ijebu Alare Association Chicago - Community Platform",
+      // period: "Oct 2023 - Dec 2024",
+      projectUrl: "http://ijebualarechicago.com/", // Replace with actual URL
+      description: [
+        "Developed a community-focused website for a Nigerian diaspora cultural organization in Chicago. ",
+        "Features include member area management, event calendars, cultural education resources, image and video galleries, and contact management systems.",
+        "Implemented custom WordPress themes with member authentication and content management capabilities to support community engagement and cultural preservation initiatives.",
+      ],
+    },
     {
       title: "Full Stack Developer",
-      company: "Freelance",
-      period: "Oct 2023 - Dec 2024",
+      company: "SolMeme - Solana Meme Token & NFT Platform",
+      // period: "Oct 2023 - Dec 2024",
+      projectUrl: "https://www.solme.me/", // Replace with actual URL
       description: [
-        "Engineered Django backend logic for cart, order, and payment systems, designed for fintech and crypto-transaction scalability",
-        "Managed MySQL databases for inventory and transactions, implementing secure APIs to ensure data integrity and fraud prevention",
+        "Built a decentralized finance (DeFi) platform for a Solana-based meme token with NFT minting capabilities.",
+        "Integrated with major Solana DEXs (Raydium, Jupiter) and implemented tokenomics dashboard, community whitelist management, and NFT marketplace preview.",
+        "Designed responsive landing pages with roadmap visualization and team profiles. Project successfully launched on MainNet with active trading community.",
+      ],
+    },
+    {
+      title: "Full Stack Developer",
+      company: "Dwello - Web3 Real Estate Platform",
+      // period: "Oct 2023 - Dec 2024",
+      projectUrl: "https://dwello-one.vercel.app", // Replace with actual URL
+      description: [
+        "Developed a decentralized real estate marketplace leveraging blockchain technology for property tokenization and transparent transactions.",
+        "Built smart contracts for fractional property ownership, implemented Web3 wallet connections (MetaMask), and created an intuitive UI for property listing, browsing, and investment tracking",
+        "Deployed on Vercel with optimized performance and mobile responsiveness.",
+      ],
+    },
+    {
+      title: "Frontend Developer",
+      company: "Weeping Plebs (Copeville) - Web3 Gaming Project",
+      // period: "Oct 2023 - Dec 2024",
+      projectUrl: " https://www.weepingplebs.com/", // Replace with actual URL
+      description: [
+        "Developed a decentralized real estate marketplace leveraging blockchain technology for property tokenization and transparent transactions.",
+        "Built smart contracts for fractional property ownership, implemented Web3 wallet connections (MetaMask), and created an intuitive UI for property listing, browsing, and investment tracking",
+        "Deployed on Vercel with optimized performance and mobile responsiveness.",
       ],
     },
   ];
@@ -86,27 +151,36 @@ export default function Portfolio() {
       "React",
       "TailwindCSS",
       "Next.js",
+      "Bootstrap",
     ],
     Backend: ["Python", "Django", "FastAPI", "Node.js"],
-    "AI/ML": ["LangChain", "LangGraph", "RAG Implementation"],
+    "AI/ML": ["LangChain", "LangGraph", "RAG Implementation", "Fine-tuning"],
     Blockchain: ["Solidity", "Rust"],
     Databases: ["SQL", "MongoDB", "PostgreSQL", "MySQL"],
     DevOps: ["CI/CD pipelines", "Git"],
   };
 
-  const RESUME_URL = './Emmanuel-Nkereuwem-Fullstack.pdf';
+  const RESUME_URL = "./Emmanuel-Nkereuwem-Fullstack.pdf";
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       {/* Navigation */}
       <nav
-        className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-slate-950/95 backdrop-blur-sm shadow-lg" : "bg-transparent"}`}
+        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+          isScrolled
+            ? "bg-slate-950/95 backdrop-blur-sm shadow-lg"
+            : "bg-transparent"
+        }`}
       >
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              EN
-            </h1>
+            <a href="." style={{ textDecoration: 'none' }}>
+              <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                EN
+              </h1>
+            </a>
+
+            {/* Desktop Menu */}
             <div className="hidden md:flex gap-8">
               {["Home", "About", "Experience", "Skills", "Contact"].map(
                 (item) => (
@@ -121,12 +195,42 @@ export default function Portfolio() {
                   >
                     {item}
                   </button>
-                ),
+                )
               )}
             </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className={`mobile-menu-btn ${isMobileMenuOpen ? "open" : ""}`}
+              onClick={toggleMobileMenu}
+              aria-label="Toggle menu"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
           </div>
         </div>
       </nav>
+
+      {/* Mobile Menu Overlay */}
+      <div
+        className={`mobile-menu-overlay ${isMobileMenuOpen ? "open" : ""}`}
+        onClick={() => setIsMobileMenuOpen(false)}
+      />
+
+      {/* Mobile Menu */}
+      <div className={`mobile-menu ${isMobileMenuOpen ? "open" : ""}`}>
+        {["Home", "About", "Experience", "Skills", "Contact"].map((item) => (
+          <button
+            key={item}
+            onClick={() => scrollToSection(item.toLowerCase())}
+            className={activeSection === item.toLowerCase() ? "active" : ""}
+          >
+            {item}
+          </button>
+        ))}
+      </div>
 
       {/* Hero Section */}
       <section
@@ -176,22 +280,15 @@ export default function Portfolio() {
             </a>
             <a
               href={RESUME_URL}
-              download="Emmanuel-Nkereuwem-Fullstack.pdf" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+              download="Emmanuel-Nkereuwem-Fullstack.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="p-3 bg-slate-800/50 hover:bg-slate-700 rounded-lg transition-all duration-300 hover:scale-110 flex items-center gap-3 group"
             >
               <FileUser
                 size={24}
                 className="text-blue-400 group-hover:text-blue-300 transition-colors"
               />
-
-              {/* <span className="font-medium">Download Resume</span> */}
-
-              {/* <ExternalLink
-                size={16}
-                className="opacity-0 group-hover:opacity-70 transition-opacity ml-auto"
-              /> */}
             </a>
           </div>
 
@@ -205,7 +302,10 @@ export default function Portfolio() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="min-h-screen flex items-center px-6 py-20">
+      <section
+        id="about"
+        className="min-h-screen flex items-center px-6 py-20"
+      >
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
             About Me
@@ -213,8 +313,8 @@ export default function Portfolio() {
 
           <div className="bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 shadow-xl">
             <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              Dynamic full-stack developer and applied AI engineer with five
-              years of experience in crafting scalable web applications,
+              Dynamic full-stack developer and applied AI engineer with over half a decade of
+               experience in crafting scalable web applications,
               AI-driven systems, and blockchain-integrated solutions.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed mb-6">
@@ -253,18 +353,33 @@ export default function Portfolio() {
             {experiences.map((exp, index) => (
               <div
                 key={index}
-                className="bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 shadow-xl hover:border-cyan-500/50 transition-all duration-300 hover:scale-[1.02]"
+                className="bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 shadow-xl hover:border-cyan-500/50 transition-all duration-300 hover:scale-[1.02] group"
               >
                 <div className="flex items-start gap-4 mb-4">
                   <div className="p-3 bg-cyan-500/10 rounded-lg">
                     <Briefcase className="text-cyan-400" size={24} />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-1">
-                      {exp.title}
-                    </h3>
-                    <p className="text-cyan-400 text-lg mb-1">{exp.company}</p>
-                    <p className="text-gray-400 text-sm">{exp.period}</p>
+                    <div className="flex items-start justify-between gap-4">
+                      <div>
+                        <h3 className="text-2xl font-bold text-white mb-1">
+                          {exp.title}
+                        </h3>
+                        <p className="text-cyan-400 text-lg mb-1">
+                          {exp.company}
+                        </p>
+                        <p className="text-gray-400 text-sm">{exp.period}</p>
+                      </div>
+                      <a
+                        href={exp.projectUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-4 py-2 bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 rounded-lg transition-all duration-300 hover:scale-105 border border-cyan-500/30 hover:border-cyan-500/50"
+                      >
+                        <span className="text-sm font-medium">View Project</span>
+                        <ExternalLink size={16} className="group-hover:translate-x-1 transition-transform" />
+                      </a>
+                    </div>
                   </div>
                 </div>
                 <ul className="space-y-2 ml-16">
@@ -351,6 +466,20 @@ export default function Portfolio() {
               </a>
 
               <a
+                href={RESUME_URL}
+              download="Emmanuel-Nkereuwem-Fullstack.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+                className="flex items-center justify-center gap-3 text-lg text-gray-300 hover:text-cyan-400 transition-all duration-300 group"
+              >
+                <FileUser
+                  className="group-hover:scale-110 transition-transform"
+                  size={24}
+                />
+                <span>Resume</span>
+                {/* <ExternalLink size={16} /> */}
+              </a>
+              <a
                 href="https://github.com/emmystark"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -360,9 +489,10 @@ export default function Portfolio() {
                   className="group-hover:scale-110 transition-transform"
                   size={24}
                 />
-                <span>github</span>
+                <span>Github</span>
                 <ExternalLink size={16} />
               </a>
+
               <a
                 href="https://www.linkedin.com/in/emmanuel-nkereuwems/"
                 target="_blank"
@@ -373,7 +503,7 @@ export default function Portfolio() {
                   className="group-hover:scale-110 transition-transform"
                   size={24}
                 />
-                <span>linkedin</span>
+                <span>Linkedin</span>
                 <ExternalLink size={16} />
               </a>
             </div>
