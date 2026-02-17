@@ -52,14 +52,37 @@ export default function Portfolio() {
 
   const experiences = [
     {
-      title: "Backend Engineer Lead",
-      company: "VideoDB AI Surveillance Agent",
+      title: "Full Stack Developer ",
+      company: "Sentinel - Full Stack Web App",
       // period: "Oct 2025 - Jan 2026",
-      projectUrl: "https://github.com/emmystark/video-surveillance-agent-.git", // Replace with actual URL
+      projectUrl: "https://sentinel-tau-hazel.vercel.app/login", // Replace with actual URL
       description: [
-        "Developed scalable backend solutions for video processing and data management",
-        "Conducted performance tuning of server applications, enhancing overall responsiveness and stability",
-        "Led integration of AI algorithms to enhance surveillance accuracy and efficiency",
+        "Delivered a high-performance full-stack web application in under two months, showcasing efficiency by rapidly prototyping and iterating on features to meet aggressive deadlines.",
+        "Led frontend development with React.js, creating responsive and intuitive user interfaces for enhanced user experience.",
+        "Built scalable backend APIs using Node.js and Express.js, integrating real-time data processing and secure endpoints.",
+        "Designed and managed PostgreSQL databases for robust data storage and querying, ensuring seamless scalability and integrity.",
+      ],
+    },
+    {
+      title: "Full Stack Developer",
+      company: "Hypertask - Web3 Full Stack Web App",
+      // period: "Oct 2025 - Jan 2026",
+      projectUrl: "https://hypertask.vercel.app", // Replace with actual URL
+      description: [
+        "Engineered a full-stack Web3 application with token deployment in just one month, highlighting effort and competence by compressing development cycles while maintaining high-quality code and security standards.",
+        "Developed frontend components using React.js and integrated Tailwind CSS for streamlined, responsive styling.",
+        "Implemented backend logic with Node.js and Express.js to handle token interactions and RESTful APIs for decentralized features.",
+      ],
+    },
+    {
+      title: "Full Stack Developer",
+      company: "Crypto/Forex Trading Bot",
+      // period: "Oct 2025 - Jan 2026",
+      projectUrl: ".", // Replace with actual URL
+      description: [
+        "Built an advanced trading bot for crypto and forex analysis and prediction in three months, exemplifying competence by incorporating complex algorithms and delivering a robust solution with minimal bugs through rigorous testing.",
+        "Crafted frontend interfaces with React.js to visualize predictions and user dashboards for intuitive interaction.",
+        "Developed backend services using Node.js and Express.js for data analysis, API integrations, and real-time predictions.",
       ],
     },
     {
