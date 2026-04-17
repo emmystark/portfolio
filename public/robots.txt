@@ -1,0 +1,40 @@
+# Robots.txt for SEO Optimization
+# Allows all search engines to crawl and index your portfolio
+
+User-agent: *
+Allow: /
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /dist/
+Allow: /dist/
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+
+# Specific rules for OpenAI, Anthropic, and other LLM crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Feed and sitemap
+Sitemap: https://emmanuelnkereuwem.vercel.app/sitemap.xml
+Sitemap: https://emmanuelnkereuwem.vercel.app/llms.txt
+
+# Crawl delay (optional - be respectful)
+Crawl-delay: 1
+
+# Request rate (optional)
+Request-rate: 1/1s

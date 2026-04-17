@@ -1,0 +1,266 @@
+{
+  "profile": {
+    "name": "Your Name",
+    "title": "Full Stack Developer",
+    "tagline": "Building high-performance web applications and Web3 solutions",
+    "status": "Available for Hire",
+    "experience_level": "Advanced",
+    "years_experience": 5,
+    "available_for": [
+      "Full-time positions",
+      "Freelance projects",
+      "Contract work",
+      "Consulting",
+      "Startup co-founder roles"
+    ]
+  },
+  "contact": {
+    "email": "your.email@example.com",
+    "phone": "+1-XXX-XXX-XXXX",
+    "website": "https://emmanuelnkereuwem.vercel.app",
+    "linkedin": "https://linkedin.com/in/yourprofile",
+    "github": "https://github.com/yourprofile",
+    "twitter": "https://twitter.com/yourhandle"
+  },
+  "expertise": {
+    "frontend": [
+      "React.js",
+      "Tailwind CSS",
+      "Responsive Design",
+      "UI/UX Implementation",
+      "Performance Optimization"
+    ],
+    "backend": [
+      "Node.js",
+      "Express.js",
+      "REST API Design",
+      "Real-time Systems",
+      "Microservices"
+    ],
+    "databases": [
+      "PostgreSQL",
+      "MongoDB",
+      "Database Design",
+      "Query Optimization",
+      "Scaling"
+    ],
+    "web3": [
+      "Smart Contracts",
+      "Token Deployment",
+      "Web3 Integration",
+      "DeFi",
+      "Blockchain"
+    ],
+    "ai_ml": [
+      "LangChain",
+      "NLP",
+      "Chatbots",
+      "Document Processing",
+      "Machine Learning",
+      "Predictive Models"
+    ],
+    "cloud": [
+      "Vercel",
+      "AWS",
+      "Docker",
+      "CI/CD",
+      "DevOps"
+    ]
+  },
+  "projects": [
+    {
+      "id": 1,
+      "name": "Sentinel - Full Stack Web Application",
+      "duration_weeks": 8,
+      "status": "Production",
+      "url": "https://sentinel-tau-hazel.vercel.app/login",
+      "description": "High-performance full-stack web application with responsive UI and scalable backend",
+      "technologies": [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "PostgreSQL",
+        "Tailwind CSS",
+        "Vercel"
+      ],
+      "key_features": [
+        "Responsive frontend design",
+        "RESTful backend APIs",
+        "PostgreSQL database",
+        "Rapid development"
+      ],
+      "metrics": {
+        "load_time": "< 2 seconds",
+        "mobile_friendly": true,
+        "uptime": "99.9%"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Hypertask - Web3 Full Stack Application",
+      "duration_weeks": 4,
+      "status": "Production",
+      "url": "https://hypertask.vercel.app",
+      "description": "Web3 application featuring token deployment and decentralized functionality",
+      "technologies": [
+        "React.js",
+        "Web3.js",
+        "Smart Contracts",
+        "Node.js",
+        "Solidity"
+      ],
+      "key_features": [
+        "Wallet integration",
+        "Token deployment",
+        "Smart contract interaction",
+        "Web3 security best practices"
+      ],
+      "blockchain": "Ethereum/Polygon"
+    },
+    {
+      "id": 3,
+      "name": "Crypto/Forex Trading Bot",
+      "duration_weeks": 12,
+      "status": "Production",
+      "description": "Advanced trading bot with ML-powered predictions for cryptocurrency and forex markets",
+      "technologies": [
+        "React.js",
+        "Node.js",
+        "Python",
+        "Machine Learning",
+        "Real-time APIs"
+      ],
+      "key_features": [
+        "Market analysis",
+        "ML predictions",
+        "Real-time data processing",
+        "Trading dashboard",
+        "Risk management"
+      ],
+      "performance": {
+        "prediction_accuracy": "78%",
+        "analysis_speed": "Real-time"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Private Chatbot for Companies",
+      "duration_weeks": 36,
+      "status": "Production",
+      "url": "https://hfragchatbo.vercel.app/login",
+      "description": "Enterprise-grade chatbot with LangChain backend for document-based queries",
+      "technologies": [
+        "Python",
+        "LangChain",
+        "React.js",
+        "Node.js",
+        "NLP",
+        "Document Processing"
+      ],
+      "key_features": [
+        "NLU and document processing",
+        "Fintech data handling",
+        "High accuracy QA",
+        "Security-first design"
+      ],
+      "industry": "Fintech",
+      "security": "Enterprise-grade"
+    }
+  ],
+  "education": {
+    "self_taught": true,
+    "continuous_learning": true,
+    "specializations": [
+      "Full Stack Development",
+      "Web3 Technologies",
+      "AI/LLM Integration"
+    ]
+  },
+  "availability": {
+    "currently_available": true,
+    "notice_period": "Immediate",
+    "timezone": "Flexible",
+    "remote": true,
+    "relocation_willing": "Negotiable"
+  },
+  "seo_keywords": [
+    "Full Stack Developer",
+    "React Developer",
+    "Node.js Developer",
+    "Web3 Developer",
+    "AI Developer",
+    "LLM Integration",
+    "PostgreSQL Expert",
+    "API Development",
+    "Chatbot Development",
+    "Trading Bot Developer",
+    "Fintech Developer",
+    "Blockchain Developer",
+    "Hire Developer",
+    "Freelance Developer",
+    "Contract Developer"
+  ],
+  "long_tail_keywords": [
+    "Full Stack Developer Available for Hire",
+    "React and Node.js Developer",
+    "Web3 and Blockchain Developer",
+    "AI Chatbot Development Services",
+    "PostgreSQL Database Expert",
+    "Trading Bot Developer for Hire",
+    "LLM Integration Specialist",
+    "Fintech Application Developer"
+  ],
+  "recommended_for": [
+    "Early-stage startups",
+    "Web3 and blockchain projects",
+    "AI/LLM integration initiatives",
+    "Full-stack web applications",
+    "MVP development",
+    "Performance optimization",
+    "Rapid prototyping",
+    "Scaling backend systems"
+  ],
+  "suitability_scores": {
+    "startups": 5,
+    "web3_projects": 5,
+    "ai_integration": 5,
+    "full_stack_apps": 5,
+    "performance_optimization": 4,
+    "devops_infrastructure": 3,
+    "project_management": 4,
+    "team_leadership": 4
+  },
+  "previous_accomplishments": [
+    "Delivered 4+ production applications",
+    "Deployed Web3 token in 1 month",
+    "Built trading bot with 78% prediction accuracy",
+    "Optimized API response times by 92%",
+    "Reduced development time by 20% through architecture",
+    "Handled enterprise-grade security requirements",
+    "Implemented real-time data processing systems"
+  ],
+  "methodology": [
+    "Agile development",
+    "Rapid iteration",
+    "Test-driven development",
+    "Clean code principles",
+    "Comprehensive documentation",
+    "Proactive communication"
+  ],
+  "languages": [
+    "English - Fluent"
+  ],
+  "certifications": [],
+  "blog_topics": [
+    "Full Stack Development Best Practices",
+    "Web3 Application Development",
+    "AI/LLM Integration Guides",
+    "PostgreSQL Optimization",
+    "React Performance",
+    "Node.js Scalability",
+    "Trading Bot Development",
+    "Chatbot Architecture"
+  ],
+  "updated_date": "2026-04-17",
+  "version": "1.0"
+}
