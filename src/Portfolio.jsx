@@ -12,6 +12,8 @@ import {
   GraduationCap,
   Linkedin,
   FileUser,
+  Layout,
+  Smartphone,
 } from "lucide-react";
 
 import "./styles.css";
@@ -52,135 +54,175 @@ export default function Portfolio() {
 
   const experiences = [
     {
-      title: "Full Stack Developer ",
-      company: "Sentinel - Full Stack Web App",
-      // period: "Oct 2025 - Jan 2026",
-      projectUrl: "https://sentinel-tau-hazel.vercel.app/login", // Replace with actual URL
+      title: "Founding Engineer & CTO",
+      company: "ProvidiusTech",
+      projectUrl: "https://providiustech.com",
       description: [
-        "Delivered a high-performance full-stack web application in under two months, showcasing efficiency by rapidly prototyping and iterating on features to meet aggressive deadlines.",
-        "Led frontend development with React.js, creating responsive and intuitive user interfaces for enhanced user experience.",
-        "Built scalable backend APIs using Node.js and Express.js, integrating real-time data processing and secure endpoints.",
-        "Designed and managed PostgreSQL databases for robust data storage and querying, ensuring seamless scalability and integrity.",
+        "ProvidiusTech is a multi-tenant AI customer support platform that pulls WhatsApp, email, webchat, Telegram, and social DMs into one AI-powered inbox, recognized by the NVIDIA Inception program.",
+        "Built a multilingual RAG pipeline that handles Amharic and Tigrinya alongside the major languages, so tenants aren't stuck with English-only support.",
+        "Designed a dual-channel email setup across AWS SES and Gmail OAuth, with per-tenant mutual exclusion so accounts never cross wires.",
+        "Put KMS envelope encryption in place to keep every tenant's credentials isolated and secure.",
+        "Built the billing and usage enforcement engine from the ground up.",
       ],
     },
     {
-      title: "Full Stack Developer",
-      company: "Hypertask - Web3 Full Stack Web App",
-      // period: "Oct 2025 - Jan 2026",
-      projectUrl: "https://hypertask.vercel.app", // Replace with actual URL
+      title: "Technical Co-Founder & CTO",
+      company: "Beldium",
+      projectUrl: "https://www.beldium.com",
       description: [
-        "Engineered a full-stack Web3 application with token deployment in just one month, highlighting effort and competence by compressing development cycles while maintaining high-quality code and security standards.",
-        "Developed frontend components using React.js and integrated Tailwind CSS for streamlined, responsive styling.",
-        "Implemented backend logic with Node.js and Express.js to handle token interactions and RESTful APIs for decentralized features.",
+        "Beldium is a compliance and marketplace platform connecting miners, buyers, and financing partners across Nigeria's solid minerals sector.",
+        "Audited the codebase against what had actually been delivered, then rebuilt the 12-week roadmap around the verified state of the project instead of the assumed one.",
+        "Tracked down a multi-layer email infrastructure failure spanning SPF, MX, and DKIM/DMARC and got it fixed.",
+        "Found leaked credentials sitting in 238 commits of git history, scrubbed them out, and rotated every affected key.",
+      ],
+    },
+    {
+      title: "ML Team Lead",
+      company: "ORDERCAST (GROUP10 E-Commerce Capstone)",
+      projectUrl: "https://group10-e-commerce-capstone-projectgit-crjdcsozz4nptzf9fmcgtn.streamlit.app",
+      description: [
+        "Led a three-person machine learning team building ORDERCAST, a model to predict order cancellation on a Nigerian e-commerce dataset.",
+        "Caught two separate feature leakage issues before they could quietly corrupt the results.",
+        "Set the evaluation framework and kept scoring consistent across three parallel models.",
+      ],
+    },
+    {
+      title: "Backend Engineer",
+      company: "IBORO - AI Chatbot for Companies",
+      projectUrl: "https://www.iboroai.com",
+      description: [
+        "Built the secure Python/LangChain backend for IBORO, an AI chatbot that lets companies query their own documents instead of digging through files by hand. Still active work.",
+        "Combined NLU and file processing to surface insights from sensitive crypto and financial data, with privacy as a first-class concern.",
+        "Went through several rounds of testing to get the system reliable enough for production use.",
+        "Cut down development time by building out reusable React components and tightening up the RESTful API.",
       ],
     },
     {
       title: "Full Stack Developer",
       company: "Crypto/Forex Trading Bot",
-      // period: "Oct 2025 - Jan 2026",
-      projectUrl: ".", // Replace with actual URL
+      projectUrl: "#",
       description: [
-        "Built an advanced trading bot for crypto and forex analysis and prediction in three months, exemplifying competence by incorporating complex algorithms and delivering a robust solution with minimal bugs through rigorous testing.",
-        "Crafted frontend interfaces with React.js to visualize predictions and user dashboards for intuitive interaction.",
-        "Developed backend services using Node.js and Express.js for data analysis, API integrations, and real-time predictions.",
-      ],
-    },
-    {
-      title: "Backend Engineer",
-      company: "Private Chatbot for Companies",
-      // period: "Jan 2025 - Sept 2025",
-      projectUrl: "https://hfragchatbo.vercel.app/login", // Replace with actual URL
-      description: [
-        "Developed a secure Python/LangChain backend for a fintech chatbot, enabling precise document-based queries for internal tools",
-        "Integrated NLU and file processing to extract insights from sensitive crypto and financial data with a high focus on privacy",
-        "Refined system accuracy through iterative testing phases to ensure reliable deployment in production environments",
-        "Reduced development time by 20% by architecting reusable React components and optimizing RESTful API performance",
-      ],
-    },
-    // {
-    //   title: "Full Stack Developer",
-    //   company: "Freelance",
-    //   // period: "Oct 2023 - Dec 2024",
-    //   projectUrl: "https://github.com/emmystark/ecommerce-platform", // Replace with actual URL
-    //   description: [
-    //     "Engineered Django backend logic for cart, order, and payment systems, designed for fintech and crypto-transaction scalability",
-    //     "Managed MySQL databases for inventory and transactions, implementing secure APIs to ensure data integrity and fraud prevention",
-    //   ],
-    // },
-    {
-      title: "Frontend Developer",
-      company: "Green Treat Ltd - Landscaping & Infrastructure Platform",
-      // period: "Oct 2023 - Dec 2024",
-      projectUrl: "https://greentreatltd.com/v2/", // Replace with actual URL
-      description: [
-        "Full-stack web development for an enterprise landscaping and civil construction company. ",
-        "Built a comprehensive WordPress-based platform featuring project portfolios, service catalogs, team management, and client testimonials.",
-        "Integrated WooCommerce for quote requests and implemented SEO optimization for improved search rankings.",
-        "The site serves as the digital presence for a company specializing in golf course construction, irrigation systems, and wastewater solutions.",
-      ],
-    },
-    {
-      title: "Frontend Developer",
-      company: "Ijebu Alare Association Chicago - Community Platform",
-      // period: "Oct 2023 - Dec 2024",
-      projectUrl: "http://ijebualarechicago.com/", // Replace with actual URL
-      description: [
-        "Developed a community-focused website for a Nigerian diaspora cultural organization in Chicago. ",
-        "Features include member area management, event calendars, cultural education resources, image and video galleries, and contact management systems.",
-        "Implemented custom WordPress themes with member authentication and content management capabilities to support community engagement and cultural preservation initiatives.",
+        "Built a trading bot for crypto and forex analysis and prediction in about three months, leaning on rigorous testing to keep bugs down.",
+        "Built the frontend in React to visualize predictions and give users a dashboard they could actually read.",
+        "Built the backend in Node.js and Express for data analysis, API integrations, and real-time predictions.",
       ],
     },
     {
       title: "Full Stack Developer",
-      company: "SolMeme - Solana Meme Token & NFT Platform",
-      // period: "Oct 2023 - Dec 2024",
-      projectUrl: "https://www.solme.me/", // Replace with actual URL
+      company: "Sentinel",
+      projectUrl: "https://sentinel-tau-hazel.vercel.app/login",
       description: [
-        "Built a decentralized finance (DeFi) platform for a Solana-based meme token with NFT minting capabilities.",
-        "Integrated with major Solana DEXs (Raydium, Jupiter) and implemented tokenomics dashboard, community whitelist management, and NFT marketplace preview.",
-        "Designed responsive landing pages with roadmap visualization and team profiles. Project successfully launched on MainNet with active trading community.",
-      ],
-    },
-    {
-      title: "Full Stack Developer",
-      company: "Dwello - Web3 Real Estate Platform",
-      // period: "Oct 2023 - Dec 2024",
-      projectUrl: "https://dwello-one.vercel.app", // Replace with actual URL
-      description: [
-        "Developed a decentralized real estate marketplace leveraging blockchain technology for property tokenization and transparent transactions.",
-        "Built smart contracts for fractional property ownership, implemented Web3 wallet connections (MetaMask), and created an intuitive UI for property listing, browsing, and investment tracking",
-        "Deployed on Vercel with optimized performance and mobile responsiveness.",
+        "Shipped a full-stack web app in under two months by prototyping fast and iterating against a tight deadline.",
+        "Led the frontend in React, building responsive, intuitive interfaces end to end.",
+        "Built the backend APIs in Node.js and Express, including real-time data processing and secured endpoints.",
+        "Designed and managed the PostgreSQL database behind it.",
       ],
     },
     {
       title: "Frontend Developer",
-      company: "Weeping Plebs (Copeville) - Web3 Gaming Project",
-      // period: "Oct 2023 - Dec 2024",
-      projectUrl: " https://www.weepingplebs.com/", // Replace with actual URL
+      company: "Green Treat Ltd",
+      projectUrl: "https://greentreatltd.com/v2/",
       description: [
-        "Developed a decentralized real estate marketplace leveraging blockchain technology for property tokenization and transparent transactions.",
-        "Built smart contracts for fractional property ownership, implemented Web3 wallet connections (MetaMask), and created an intuitive UI for property listing, browsing, and investment tracking",
-        "Deployed on Vercel with optimized performance and mobile responsiveness.",
+        "Built the web presence for an enterprise landscaping and civil construction company on WordPress, covering project portfolios, service catalogs, team pages, and client testimonials.",
+        "Wired up WooCommerce for quote requests and handled SEO so the site could actually be found. Covers the company's golf course construction, irrigation, and wastewater work.",
+      ],
+    },
+    {
+      title: "Frontend Developer",
+      company: "Ijebu Alare Association Chicago",
+      projectUrl: "http://ijebualarechicago.com/",
+      description: [
+        "Built a community site for a Nigerian diaspora cultural organization in Chicago, with a member area, event calendar, cultural resources, and media galleries.",
+        "Set up a custom WordPress theme with member authentication to support the community's engagement and cultural preservation work.",
+      ],
+    },
+    {
+      title: "Full Stack Developer",
+      company: "Hypertask",
+      projectUrl: "https://hypertask.vercel.app",
+      description: [
+        "Built a full Web3 app with token deployment in about a month, compressing the timeline without cutting corners on security.",
+        "Built the frontend in React with Tailwind CSS, and the backend in Node.js and Express to handle token interactions and decentralized features.",
+      ],
+    },
+    {
+      title: "Full Stack Developer",
+      company: "SolMeme",
+      projectUrl: "https://www.solme.me/",
+      description: [
+        "Built a DeFi platform for a Solana meme token with NFT minting, integrated with Raydium and Jupiter, plus a tokenomics dashboard and whitelist management.",
+        "Designed the landing pages and roadmap visuals. The project launched on mainnet with an active trading community.",
+      ],
+    },
+    {
+      title: "Full Stack Developer",
+      company: "Dwello",
+      projectUrl: "https://dwello-one.vercel.app",
+      description: [
+        "Built a decentralized real estate marketplace using blockchain for property tokenization and transparent transactions.",
+        "Wrote the smart contracts for fractional ownership, wired up MetaMask, and built the UI for listing, browsing, and tracking investments.",
+      ],
+    },
+    {
+      title: "Frontend Developer",
+      company: "Weeping Plebs (Copeville)",
+      projectUrl: "https://www.weepingplebs.com/",
+      description: [
+        "Built the frontend for a Web3 gaming project, including wallet connections and a responsive, game-themed interface.",
       ],
     },
   ];
 
   const skills = {
+    "AI/ML": [
+      "LLMs",
+      "LangChain",
+      "LangGraph",
+      "RAG Implementation",
+      "Fine-tuning",
+      "NLP",
+      "Machine Learning",
+      "Chatbots",
+      "Document Processing",
+    ],
+    Backend: [
+      "Python",
+      "Django",
+      "Django REST Framework",
+      "FastAPI",
+      "Node.js",
+      "Express.js",
+      "REST APIs",
+      "OOP",
+    ],
     Frontend: [
-      "HTML",
+      "HTML5",
       "CSS",
       "JavaScript",
       "TypeScript",
       "React",
-      "TailwindCSS",
+      "Redux",
       "Next.js",
+      "TailwindCSS",
       "Bootstrap",
+      "AJAX",
     ],
-    Backend: ["Python", "Django", "FastAPI", "Node.js"],
-    "AI/ML": ["LangChain", "LangGraph", "RAG Implementation", "Fine-tuning"],
-    Blockchain: ["Solidity", "Rust"],
-    Databases: ["SQL", "MongoDB", "PostgreSQL", "MySQL"],
-    DevOps: ["CI/CD pipelines", "Git"],
+    Mobile: ["React Native", "NativeScript", "Android", "iOS"],
+    Databases: ["SQL", "NoSQL", "PostgreSQL", "MySQL", "MongoDB"],
+    "Cloud & DevOps": [
+      "AWS",
+      "Amazon EC2",
+      "Amazon S3",
+      "AWS CodePipeline",
+      "Azure",
+      "Docker",
+      "Netlify",
+      "CI/CD pipelines",
+      "Git",
+      "GitHub",
+    ],
+    CMS: ["WordPress", "WooCommerce"],
+    Blockchain: ["Solidity", "Rust", "Smart Contracts"],
   };
 
   const RESUME_URL = "./Emmanuel-Nkereuwem-Fullstack.pdf";
@@ -198,9 +240,11 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <a href="." style={{ textDecoration: 'none' }}>
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                EN
-              </h1>
+              <img
+                src="/stark.png"
+                alt="Emmanuel Nkereuwem"
+                className="w-10 h-10 rounded-full object-cover border-2 border-cyan-400/50"
+              />
             </a>
 
             {/* Desktop Menu */}
@@ -271,10 +315,11 @@ export default function Portfolio() {
               Emmanuel Nkereuwem
             </h2>
             <p className="text-2xl md:text-3xl text-gray-300 mb-2">
-              Backend Engineer & AI Developer
+              Founding Engineer & CTO
             </p>
             <p className="text-lg text-gray-400">
-              Building scalable AI-driven systems and blockchain solutions
+              I design and build the AI infrastructure that lets one platform
+              serve many tenants safely, from the first commit to production.
             </p>
           </div>
 
@@ -327,7 +372,7 @@ export default function Portfolio() {
       {/* About Section */}
       <section
         id="about"
-        className="min-h-screen flex items-center px-6 py-20"
+        className="flex items-center px-6 py-20 md:py-28"
       >
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -336,20 +381,26 @@ export default function Portfolio() {
 
           <div className="bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 shadow-xl">
             <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              Dynamic full-stack developer and applied AI engineer with over half a decade of
-               experience in crafting scalable web applications,
-              AI-driven systems, and blockchain-integrated solutions.
+              Founding engineer and CTO with hands-on ownership across the
+              full stack, from RAG pipelines and multi-tenant infrastructure
+              to security audits and production deployment. I currently
+              serve as CTO and sole engineer at ProvidiusTech, a
+              multi-tenant AI customer support platform recognized by the
+              NVIDIA Inception program, and as technical co-founder at
+              Beldium, a compliance and marketplace platform for Nigeria's
+              solid minerals sector.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              Expertise in developing production-ready AI tools for diverse
-              applications, including surveillance, chatbots, and fintech,
-              complemented by comprehensive full-stack development using modern
-              frameworks.
+              My work spans designing multilingual RAG systems supporting
+              languages like Amharic and Tigrinya, building per-tenant
+              security architecture with KMS envelope encryption, auditing
+              and rebuilding infrastructure under real production
+              constraints, and leading technical teams through complex data
+              science work.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed">
-              Proven track record in remote collaboration, optimizing
-              performance, and delivering ethical, high-impact solutions. Fluent
-              in English and French.
+              Background in mechatronics engineering, with an ongoing
+              interest in IoT and voice assistant hardware.
             </p>
 
             <div className="mt-8 flex items-center gap-2 text-cyan-400">
@@ -393,15 +444,17 @@ export default function Portfolio() {
                         </p>
                         <p className="text-gray-400 text-sm">{exp.period}</p>
                       </div>
-                      <a
-                        href={exp.projectUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2 bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 rounded-lg transition-all duration-300 hover:scale-105 border border-cyan-500/30 hover:border-cyan-500/50"
-                      >
-                        <span className="text-sm font-medium">View Project</span>
-                        <ExternalLink size={16} className="group-hover:translate-x-1 transition-transform" />
-                      </a>
+                      {exp.projectUrl && exp.projectUrl !== "#" && (
+                        <a
+                          href={exp.projectUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 px-4 py-2 bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 rounded-lg transition-all duration-300 hover:scale-105 border border-cyan-500/30 hover:border-cyan-500/50"
+                        >
+                          <span className="text-sm font-medium">View Project</span>
+                          <ExternalLink size={16} className="group-hover:translate-x-1 transition-transform" />
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -439,8 +492,10 @@ export default function Portfolio() {
                   {category === "Frontend" && <Code size={20} />}
                   {category === "Backend" && <Database size={20} />}
                   {category === "AI/ML" && <Zap size={20} />}
-                  {category === "DevOps" && <Cloud size={20} />}
+                  {category === "Cloud & DevOps" && <Cloud size={20} />}
                   {category === "Databases" && <Database size={20} />}
+                  {category === "Mobile" && <Smartphone size={20} />}
+                  {category === "CMS" && <Layout size={20} />}
                   {category === "Blockchain" && <Code size={20} />}
                   {category}
                 </h3>
